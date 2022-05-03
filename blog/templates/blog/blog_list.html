@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Blog | made of glass {% endblock title %}
+{% block header %}Blog{% endblock header %}
+{% block body %}
+{% for blog in blog_list %}
+{{ blog.slug }}
+{% empty %}
+No blogs.
+{% endfor %}
+{% endblock body %}
