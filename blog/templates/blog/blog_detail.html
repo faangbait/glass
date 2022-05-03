@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load martortags static %}
 {% block title %}Blog | made of glass {% endblock title %}
-{% block header %}Blog{% endblock header %}
+{% block header %}{{ blog.title }}{% endblock header %}
 {% block body %}
 {{ blog.body | safe_markdown }}
 {% endblock body %}
