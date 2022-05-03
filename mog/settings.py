@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'martor',
     'blog',
     'frontend'
 ]
@@ -71,6 +72,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mog.wsgi.application'
 
+MARTOR_THEME = "bootstrap"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -116,7 +118,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-
+STATIC_ROOT = 'static/'
 STATIC_URL = 'static/'
 
 # Default primary key field type

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load martortags static %}
+{% block title %}Blog | made of glass {% endblock title %}
+{% block header %}Blog{% endblock header %}
+{% block body %}
+{{ blog.body | safe_markdown }}
+{% endblock body %}
+
+{% block css %}
+<link href="{% static 'martor/css/martor.bootstrap.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+{% endblock css %}
+{% block extra_js %} {{ blog.media }} {% endblock extra_js %}

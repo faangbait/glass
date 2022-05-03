@@ -3,7 +3,7 @@
 {% block header %}Blog{% endblock header %}
 {% block body %}
 {% for blog in blog_list %}
-{{ blog.slug }}
+<a href="{% url 'blog:detail' blog.slug %}">{{ blog.slug }}</a>
 {% empty %}
 No blogs.
 {% endfor %}
